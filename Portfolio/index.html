@@ -1,9 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Adicionando para centralizar o conteúdo verticalmente */
+            height: 100vh;
+            background-color: #2d2d2d; /* cor de fundo */
+        }
+
+        h1 {
+            font-size: 30px; /* tamanho do texto */
+            text-align: center;
+            color: rgb(222, 118, 0); /* cor do texto */
+            margin-bottom: 20px; /* margem inferior */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Centralizando o conteúdo horizontalmente */
+            align-items: center; /* Centralizando o conteúdo verticalmente */
+        }
+
+        .box {
+            position: relative;
+            width: 300px; /* largura da caixa */
+            height: 230px; /* altura da caixa */
+            margin: 0 20px; /* espaçamento horizontal entre as caixas */
+            border-radius: 10px; /* bordas arredondadas */
+            background-color: #000000; /* cor de fundo */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden; /* Garantindo que a imagem não ultrapasse os limites da caixa */            
+            background-size: cover; /* Faz a imagem cobrir todo o conteúdo */
+            background-position: top; /* Centraliza a imagem */
+            background-size: 100% calc(100% - 24%);
+        }
+
+        .footer {
+            position: absolute; /* posicionamento absoluto dentro da caixa */
+            bottom: 0; /* alinhar no fundo da caixa */
+            width: 100%; /* ocupar toda a largura da caixa */
+            height: 24%; /* altura do footer */
+            background-color: #404040; /* cor de fundo do footer */
+            display: flex;
+            flex-direction: column; /* alinhar os itens em coluna */
+            align-items: left; /* alinhar à esquerda */
+            border-bottom-left-radius: 10px; /* borda arredondada esquerda */
+            border-bottom-right-radius: 10px; /* borda arredondada direita */
+        }
+
+        .footer h5 {
+            margin: 10px 0 0 8px;
+            color: #cccccc; /* cor do texto */
+            font-weight: bold; /* texto negrito */
+            font-size: 8px; /* tamanho da fonte menor */
+        }
+
+        .footer h3 {
+            margin: 5px 0 0 8px; /* margem à esquerda */
+            color: #ffffff; /* cor do texto */
+            font-weight: bold; /* texto negrito */
+            font-size: 16px; /* tamanho da fonte maior */
+        }
+        
+        .footer img {
+            position: absolute;
+            right: 20px; /* 10 pixels a partir da margem direita */
+            bottom: 27px; /* 10 pixels a partir da margem inferior */
+            height: 20%; /* ajuste a altura conforme necessário */        
+            margin-left: 6px; /* Alinhar a imagem à direita */
+            width: 4%;            
+        }
+
+        #box1 {
+            background-image: url('images/project-thumbnail-1.png'); /* Define a imagem como plano de fundo */
+        }        
+        
+        #box2 {
+            background-image: url('images/project-thumbnail-2.png'); /* Define a imagem como plano de fundo */
+        }
+
+        h2 {
+            font-size: 30px; /* tamanho do texto */
+            text-align: center;
+            color: rgb(80, 69, 200); /* cor do texto */
+            margin-top: 90px; /* margem inferior */
+        }
+
+        .experience-block {
+            width: 80%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .experience-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .experience-text h3, .experience-text p {
+            margin-bottom: 0.1px;
+            margin-left: 145px;
+            margin-right: 110px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .experience-text h4, .experience-text p1 {
+            margin-bottom: 0.1px;
+            margin-left: 160px;
+            margin-right: 170px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .experience-img {
+            position: absolute;
+            right: 1045px; /* 10 pixels a partir da margem direita */
+            bottom: 27px; /* 10 pixels a partir da margem inferior */
+            height: 40%; /* ajuste a altura conforme necessário */        
+            margin-left: 6px; /* Alinhar a imagem à direita */
+            width: 4%;
+        }
+        
+        .experience-img2 {
+            position: absolute;
+            right: 1045px; /* 10 pixels a partir da margem direita */
+            bottom: 27px; /* 10 pixels a partir da margem inferior */
+            height: 20%; /* ajuste a altura conforme necessário */        
+            margin-left: 6px; /* Alinhar a imagem à direita */
+            width: 4%;
+        }
+
+        .experience-img3 {
+            position: absolute;
+            right: 1045px; /* 10 pixels a partir da margem direita */
+            bottom: 27px; /* 10 pixels a partir da margem inferior */
+            height: 0%; /* ajuste a altura conforme necessário */        
+            margin-left: 6px; /* Alinhar a imagem à direita */
+            width: 4%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>PROJECTS</h1>
+
+    <div class="container">
+        <div class="box" id="box1">
+            <div class="footer">            
+                <h5>CLICK HERE TO VISIT</h5>
+                <h3>HTML TUTORIAL</h3>
+                <img src="images/View Icon.png" alt="Seta">
+            </div>
+        </div>
+
+        <div class="box" id="box2">
+            <div class="footer">            
+                <h5>CLICK HERE TO VISIT</h5>
+                <h3>CSS TUTORIAL</h3>
+                <img src="images/View Icon.png" alt="Seta">
+            </div>
+        </div>
+    </div>
+
+    <h2>EXPERIENCE</h2>
+
+    
+    <div class="experience-block">
+      <div class="experience-text">          
+          <h3>Lead Software Engineer at Google</h3>
+          <p style="font-size: 14px; color: #757575;">Nov 2019 - Present</p>
+          <div class="experience-img">
+            <img src="images/google-logo.png" alt="google-logo">
+          </div> 
+      </div>
+      <p style="font-size: 15px; color: #757575; text-align: left;">As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's<br> 
+        core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of<br> 
+        search accuracy and efficiency, optimizing user experiences for millions of users worldwide.</p>
+  </div>
+
+  <div class="experience-block">
+    <div class="experience-text">          
+        <h3>Junior Software Engineer at Apple</h3>
+        <p style="font-size: 14px; color: #757575;">Jan 2016 - Dec 2017</p>
+        <div class="experience-img2">
+          <img src="images/apple-logo.png" alt="apple-logo">
+        </div> 
+    </div>
+    <p style="font-size: 15px; color: #757575; text-align: left;">During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the<br>
+      architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I<br> 
+      provided technical leadership to a cross-functional team.</p>
+</div>
+
+<div class="experience-block">
+  <div class="experience-text">          
+      <h4>Software Engineer at Meta</h4>
+      <p style="font-size: 14px; color: #757575;">Jan 2017 - Oct 2019</p>
+      <div class="experience-img3">
+        <img src="images/meta-logo.png" alt="meta-logo">
+      </div> 
+  </div>
+  <p style="font-size: 15px; color: #757575; text-align: left;">At Meta, I served as a  Software Engineer, focusing on the design and implementation of backend systems for<br>
+     the social media giant's dynamic platform. Working on projects that involved large-scale data processing and<br>
+     user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.</p>
+</div>
+
+  
+</body>
+</html>   
