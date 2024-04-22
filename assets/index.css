@@ -20,14 +20,17 @@
   font-size: 18px;
   z-index: 1000;
 }
+
 a {
   color: #ffff;
 }
+
 .nav-links {
   display: flex;
   gap: 40px;
   cursor: pointer;
 }
+
 main {
   background-color: #161816;
 }
@@ -45,29 +48,36 @@ main {
   margin-top: 70px;
   width: 258px;
 }
+
 .align-title {
   background: rgb(63, 94, 251);
+  
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
+  
   border-radius: 30px;
 }
+
 .title-presentation {
   color: #ffff;
   text-align: center;
   margin: 20px 0px 0px;
 }
+
 .subtitle-presentation {
   color: #ffffff6f;
   text-align: center;
   margin: 30px 0px 0px;
 }
+
 .buttons {
   margin: 40px;
   gap: 10px;
 }
+
 .btn-linkedin {
   background-color: #ffff;
   color: #000000;
@@ -78,6 +88,7 @@ main {
   border: none;
   cursor: pointer;
 }
+
 .btn-github {
   background-color: transparent;
   border: 1px solid #ffff;
@@ -95,11 +106,13 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .stack-title {
   color: #ffffffc1;
   font-weight: 600;
   margin-bottom: 40px;
 }
+
 .align-stacks {
   margin-top: 20px;
   padding: 10px;
@@ -119,11 +132,13 @@ main {
   justify-content: center;
   color: #ffff;
   background: rgb(63, 94, 251);
+  
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
+
   margin-top: 60px;
   font-weight: 600;
 }
@@ -184,7 +199,7 @@ main {
   margin-left: 6px;
 }
 
-/*********EXPERIENCE********* !!!*/
+/*********EXPERIENCE*********!!!*/
 .experience-block {
   display: flex;
   justify-content: center;
@@ -200,11 +215,13 @@ main {
   justify-content: center;
   color: #ffff;
   background: rgb(63, 94, 251);
+  
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
+
   margin-top: 80px;
   font-weight: 600;
 }
